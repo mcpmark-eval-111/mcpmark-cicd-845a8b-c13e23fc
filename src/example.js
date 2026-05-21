@@ -1,10 +1,11 @@
-// Example file with intentional linting violations
-const unusedVariable = "this is never used"
-let anotherUnused = "also never used"
+const unusedVariable = "This will trigger no-unused-vars error"
 
 function greet(name) {
-    const message = "Hello, " + name
-    return message
+    const greeting = "Hello, " + name
+    console.log(greeting)
+    return greeting
 }
 
-const result = greet("World")
+const anotherUnused = "another one"
+
+greet("World")
